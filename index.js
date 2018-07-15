@@ -18,11 +18,11 @@ function destructivelyRemoveFirstKitten(name) {
 }
 
 function appendKitten(name){
- return kittens.splice(kittens.length-1,0,name)//[...kittens,name]
+ return kittens.concat(name) //[...kittens,name]
 }
 
 function prependKitten(name){
-  return [name,...kittens]
+  return kittens.splice(0,0,name) //[name,...kittens]
 }
 
 function removeLastKitten(){
